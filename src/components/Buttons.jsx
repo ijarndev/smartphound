@@ -16,7 +16,7 @@ export function PrimaryButton({ children }) {
 export function StarOnGithubButton() {
   return (
     <GitHubButton
-      href="https://github.com/ijarndev"
+      href="https://github.com/ijarndev/smartphound"
       data-color-scheme="no-preference: light; light: light; dark: dark;"
       data-icon="octicon-star"
       data-size="large"
