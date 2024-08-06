@@ -41,35 +41,35 @@ export function Result({ globalProgress }) {
     return (
       <section className="flex justify-center items-center px-6 2xl:px-80 flex-col gap-y-10 pb-20">
         <header className="w-full flex flex-col items-center">
-          <h1 className="text-gray-700 font-semibold text-xl text-center 2xl:text-4xl">Your perfect smartphone is</h1>
+          <h1 className="text-gray-700 font-semibold text-xl text-center 2xl:text-4xl">Tu smartphone ideal es el</h1>
           <span className="font-bold w-full text-3xl text-center 2xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-sky-500">
-            { data ? data.device_name : 'Loading...' }
+            { data.device_name }
           </span>
         </header>
 
         <div className="flex flex-col 2xl:flex-row gap-x-10 2xl:mt-10">
-          { data ? <img className="2xl:max-h-96" src={data.device_image} alt="" /> : 'Loading...' }
+          { <img className="2xl:max-h-96" src={data.device_image} alt="" /> }
 
           <div>
-            <p className="text-gray-600 text-xl">☝🤓 Here are some extra details just in case:</p>
+            <p className="text-gray-600 text-xl">☝🤓 Detalles técnicos por si acaso:</p>
 
             <ul className="pt-5">
               <li><strong className="text-gray-600">CPU</strong>: {data.cpu}</li>
-              <li><strong className="text-gray-600">Storage</strong>: {data.storage}</li>
-              <li><strong className="text-gray-600">Screen</strong>: {data.screen}</li>
-              <li><strong className="text-gray-600">Battery</strong>: {data.battery}</li>
-              <li><strong className="text-gray-600">Camera</strong>: {data.camera}</li>
+              <li><strong className="text-gray-600">Almacenamiento</strong>: {data.storage}</li>
+              <li><strong className="text-gray-600">Pantalla</strong>: {data.screen}</li>
+              <li><strong className="text-gray-600">Batería</strong>: {data.battery}</li>
+              <li><strong className="text-gray-600">Cámara</strong>: {data.camera}</li>
             </ul>
 
             <div className="mt-5 flex-grow flex gap-x-2">
-              <AmazonButton href={`https://www.amazon.es/s?k=${data.device_name}`}>Search on Amazon</AmazonButton>
+              <AmazonButton href={`https://www.amazon.es/s?k=${data.device_name}`}>Buscar en Amazon</AmazonButton>
               <a href="/"><PrimaryButton>Try again</PrimaryButton></a>
             </div>
           </div>
         </div>
 
         <div className="">
-          { data ? <p className="2xl:px-40 text-gray-600 text-xl text-center">{data.device_description}</p> : 'Loading...' }
+          { <p className="2xl:px-40 text-gray-600 text-xl text-center">{data.device_description}</p> }
         </div>
       </section>
     )

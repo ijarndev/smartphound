@@ -22,7 +22,7 @@ export const buildPrompt = (settings) => {
 
     Take into account that I have a ${budget} budget.
 
-    Please respond only with a JSON file with this format:
+    Please respond in spanish only with a JSON file with this format:
 
     {
       device_name: <device's brand and model>,
