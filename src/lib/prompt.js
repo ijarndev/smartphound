@@ -12,6 +12,7 @@ export const buildPrompt = (settings) => {
   const usage = settings.filter(item => item.category === 'usage')[0].value
   const specs = settings.filter(item => item.category === 'specs')[0].value
   const budget = settings.filter(item => item.category === 'budget')[0].value
+  const design = settings.filter(item => item.category === 'design')[0].value
 
   return `
     Hey! I wanna buy a new smartphone but I don't have any technical knowledge so I made this list of attributes that
@@ -19,6 +20,7 @@ export const buildPrompt = (settings) => {
 
     1. The main use of the device will be: ${usage}
     2. The spec I value the most is: ${specs}
+    3. The design must be something ${design}
 
     Take into account that I have a ${budget} budget.
 

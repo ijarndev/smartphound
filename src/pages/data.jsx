@@ -10,10 +10,6 @@ export const ShowNextContext = createContext()
 export function Data({ children, next, index }) {
   const progress = useContext(ProgressContext)
 
-  if(progress.length < index) window.location.replace('/')
-
-  console.log(index)
-
   const [showNext, setShowNext] = useState(false)
   
   return (

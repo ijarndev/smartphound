@@ -60,7 +60,7 @@ function App() {
           path="/data/budget"
           element={
             <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
-              <Data key="collect-budget" next="result" index={2}>
+              <Data key="collect-budget" next="design" index={2}>
                 <OptionFrame
                   options={[
                     { id: 0, image: 'low-budget', name: "Algo básico", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'low' },
@@ -69,6 +69,25 @@ function App() {
                   ]}
                   title="¿Cómo estás de presupuesto?"
                   category="budget"
+                />
+              </Data>
+            </ProgressContext.Provider>
+          }
+        />
+
+        <Route 
+          path="/data/design"
+          element={
+            <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
+              <Data key="collect-design" next="result" index={3}>
+                <OptionFrame
+                  options={[
+                    { id: 0, image: 'basic-design', name: "Sencillo", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'simple' },
+                    { id: 1, image: 'normal-design', name: 'Normal', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'decent' },
+                    { id: 2, image: 'cool-design', name: 'Llamativo', description: "With a large storage size you're gonna be able to store a lot of pictures, videos and music.", value: 'very cool' }
+                  ]}
+                  title="Hablemos del diseño"
+                  category="design"
                 />
               </Data>
             </ProgressContext.Provider>
