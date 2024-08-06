@@ -5,7 +5,6 @@ import { Header } from './components/Header.jsx'
 import { OptionFrame } from "./components/OptionFrame.jsx"
 import { Result } from "./pages/result.jsx"
 import { Data } from "./pages/data.jsx"
-import { useEffect } from "react"
 
 export const ProgressContext = createContext() 
 
@@ -23,7 +22,7 @@ function App() {
           path="/data/usage"
           element={
             <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
-              <Data key="collect-usage" next="specs">
+              <Data key="collect-usage" next="specs" index={0}>
                 <OptionFrame
                   options={[
                     { id: 0, image: 'communication', name: 'Communication', description: "You're a pretty basic user who only appreciates a good communication device.", value: 'communication' },
@@ -42,7 +41,7 @@ function App() {
           path="/data/specs"
           element={
             <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
-              <Data key="collect-specs" next="budget">
+              <Data key="collect-specs" next="budget" index={1}>
                 <OptionFrame
                   options={[
                     { id: 0, image: 'battery', name: 'Battery', description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'communication' },
@@ -61,7 +60,7 @@ function App() {
           path="/data/budget"
           element={
             <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
-              <Data key="collect-budget" next="result">
+              <Data key="collect-budget" next="result" index={2}>
                 <OptionFrame
                   options={[
                     { id: 0, image: 'low-budget', name: "I'm poor", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'low' },

@@ -12,17 +12,14 @@ export function Option({ name, description, value, category, image }) {
   const setShowNext = useContext(ShowNextContext)
 
   const handleClick = () => {
-    const newProgress = globalProgress
-
     const currentCategory = globalProgress.filter((item) => item.category === category)
     const isAlreadyDone = currentCategory.length > 0 ? true : false
 
-    newProgress.push(
-      { category: category, value: value }
-    )
-
     if(!isAlreadyDone) {
-      setGlobalProgress(newProgress)
+      setGlobalProgress([
+        ...globalProgress,
+        { category: category, value: value }
+      ])
       setOptionSelected(!optionSelected)
     }
 
