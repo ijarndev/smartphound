@@ -41,7 +41,7 @@ function App() {
           path="/data/specs"
           element={
             <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
-              <Data key="collect-specs" next="result">
+              <Data key="collect-specs" next="budget">
                 <OptionFrame
                   options={[
                     { id: 0, image: 'battery', name: 'Battery', description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'communication' },
@@ -50,6 +50,25 @@ function App() {
                   ]}
                   title="What do you value the most in your mobile device?"
                   category="specs"
+                />
+              </Data>
+            </ProgressContext.Provider>
+          }
+        />
+
+        <Route 
+          path="/data/budget"
+          element={
+            <ProgressContext.Provider value={[globalProgress, setGlobalProgress]}>
+              <Data key="collect-budget" next="result">
+                <OptionFrame
+                  options={[
+                    { id: 0, image: 'low-budget', name: "I'm poor", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'low' },
+                    { id: 1, image: 'normal-budget', name: 'Moderate', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'moderate' },
+                    { id: 2, image: 'high-budget', name: 'Elon Musk', description: "With a large storage size you're gonna be able to store a lot of pictures, videos and music.", value: 'high' }
+                  ]}
+                  title="How's your budget?"
+                  category="budget"
                 />
               </Data>
             </ProgressContext.Provider>
