@@ -16,8 +16,6 @@ export function Data({ children, next, index }) {
 
   const [showNext, setShowNext] = useState(false)
   
-  if(!next) window.location.replace('/')
-
   return (
     <section className='flex flex-col justify-center md:mt-20'>
       <div>
