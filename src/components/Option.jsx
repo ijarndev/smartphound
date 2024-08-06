@@ -4,7 +4,7 @@ import { ProgressContext } from "../App"
 import { ShowNextContext } from '../pages/data'
 
 export function Option({ name, description, value, category, image }) {
-  const defaultStyles = 'border-4 border-black border-opacity-30 rounded-md p-4 sm:p-10 sm:min-w-60 hover:bg-gray-200'
+  const defaultStyles = 'border-4 border-black border-opacity-30 rounded-md hover:bg-gray-200 p-4'
   const selectedStyles = ' border-violet-500 border-opacity-100 bg-gray-200'
 
   const [optionSelected, setOptionSelected] = useState(false)
@@ -27,7 +27,7 @@ export function Option({ name, description, value, category, image }) {
   }
 
   return (
-    <article onClick={handleClick} className="flex flex-col cursor-pointer relative w-20 md:w-80">
+    <article onClick={handleClick} className="flex flex-col cursor-pointer relative w-20 h-20 md:w-80 md:h-80 items-stretch">
       {
         optionSelected && <span className="absolute top-2 right-2 z-10">
           <Check />
@@ -36,7 +36,7 @@ export function Option({ name, description, value, category, image }) {
 
       <div className={optionSelected ? defaultStyles + selectedStyles : defaultStyles}>
         <div className="flex justify-center">
-          <img className="w-full max-w-[50px] sm:max-w-[200px]" src={`/${image}.svg`} alt="" />        
+          <img className="w-full md:max-w-[200px]" src={`/${image}.svg`} alt="" />        
         </div>
       </div>
 

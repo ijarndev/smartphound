@@ -9,8 +9,6 @@ import { Link } from "react-router-dom"
 import { Loader } from '../components/Loader'
 
 export function Result({ globalProgress }) {
-  console.log(globalProgress)
-
   const [data, setData] = useState()
 
   useEffect(() => {
@@ -42,15 +40,15 @@ export function Result({ globalProgress }) {
   if(data) {
     return (
       <section className="flex justify-center items-center px-6 2xl:px-80 flex-col gap-y-10 pb-20">
-        <header>
+        <header className="w-full flex flex-col items-center">
           <h1 className="text-gray-700 font-semibold text-xl text-center 2xl:text-4xl">Your perfect smartphone is</h1>
-          <span className="font-bold text-3xl text-center 2xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-sky-500">
+          <span className="font-bold w-full text-3xl text-center 2xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-sky-500">
             { data ? data.device_name : 'Loading...' }
           </span>
         </header>
 
         <div className="flex flex-col 2xl:flex-row gap-x-10 2xl:mt-10">
-          { data ? <img className="2xl:max-w-96" src={data.device_image} alt="" /> : 'Loading...' }
+          { data ? <img className="2xl:max-h-96" src={data.device_image} alt="" /> : 'Loading...' }
 
           <div>
             <p className="text-gray-600 text-xl">☝🤓 Here are some extra details just in case:</p>

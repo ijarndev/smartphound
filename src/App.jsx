@@ -25,11 +25,11 @@ function App() {
               <Data key="collect-usage" next="specs" index={0}>
                 <OptionFrame
                   options={[
-                    { id: 0, image: 'communication', name: 'Communication', description: "You're a pretty basic user who only appreciates a good communication device.", value: 'communication' },
-                    { id: 1, image: 'gaming', name: 'Gaming', description: 'You want the best experience to beat all your enemies in-game!', value: 'gaming' },
-                    { id: 2, image: 'photography', name: 'Photography', description: "You want to capture your enviroment's beauty in your device.", value: 'photograpy' }
+                    { id: 0, image: 'communication', name: 'Comunicación', description: "You're a pretty basic user who only appreciates a good communication device.", value: 'communication' },
+                    { id: 1, image: 'gaming', name: 'Juegos', description: 'You want the best experience to beat all your enemies in-game!', value: 'gaming' },
+                    { id: 2, image: 'photography', name: 'Fotografía', description: "You want to capture your enviroment's beauty in your device.", value: 'photograpy' }
                   ]}
-                  title="What's the main activity you do with your smartphone?"
+                  title="¿Cuál es la actividad principal que realizas con el móvil?"
                   category="usage"
                 />
               </Data>
@@ -44,11 +44,11 @@ function App() {
               <Data key="collect-specs" next="budget" index={1}>
                 <OptionFrame
                   options={[
-                    { id: 0, image: 'battery', name: 'Battery', description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'communication' },
-                    { id: 1, image: 'cpu', name: 'Performance', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'performance' },
-                    { id: 2, image: 'storage', name: 'Storage', description: "With a large storage size you're gonna be able to store a lot of pictures, videos and music.", value: 'photograpy' }
+                    { id: 0, image: 'battery', name: 'Batería', description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'communication' },
+                    { id: 1, image: 'cpu', name: 'Rendimiento', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'performance' },
+                    { id: 2, image: 'storage', name: 'Almacenamiento', description: "With a large storage size you're gonna be able to store a lot of pictures, videos and music.", value: 'photograpy' }
                   ]}
-                  title="What do you value the most in your mobile device?"
+                  title="¿Qué valoras más en tu dispositivo?"
                   category="specs"
                 />
               </Data>
@@ -63,11 +63,11 @@ function App() {
               <Data key="collect-budget" next="result" index={2}>
                 <OptionFrame
                   options={[
-                    { id: 0, image: 'low-budget', name: "I'm poor", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'low' },
-                    { id: 1, image: 'normal-budget', name: 'Moderate', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'moderate' },
+                    { id: 0, image: 'low-budget', name: "Algo básico", description: "You'll use your device for long periods of time so you need the battery to be powerful.", value: 'low' },
+                    { id: 1, image: 'normal-budget', name: 'Moderado', description: 'You want a device that will not complain about a lot of processes but handle them all smoothly.', value: 'moderate' },
                     { id: 2, image: 'high-budget', name: 'Elon Musk', description: "With a large storage size you're gonna be able to store a lot of pictures, videos and music.", value: 'high' }
                   ]}
-                  title="How's your budget?"
+                  title="¿Cómo estás de presupuesto?"
                   category="budget"
                 />
               </Data>
