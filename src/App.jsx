@@ -5,6 +5,7 @@ import { Header } from './components/Header.jsx'
 import { OptionFrame } from "./components/OptionFrame.jsx"
 import { Result } from "./pages/result.jsx"
 import { Data } from "./pages/data.jsx"
+import { useEffect } from "react"
 
 export const ProgressContext = createContext() 
 
