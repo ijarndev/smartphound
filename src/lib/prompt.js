@@ -29,10 +29,11 @@ export const buildPrompt = (settings) => {
     {
       device_name: <device's brand and model>,
       device_description: <a short review of the device in no more than 40 words>,
-      cpu: <device's CPU model>
-      storage: <device's storage size>
-      screen: <screen's resolution>
-      battery: <battery's power>
+      average_price: <the average price in USD, make sure it has this format: $x.xx USD>,
+      cpu: <device's CPU model>,
+      storage: <device's storage size>,
+      screen: <screen's resolution>,
+      battery: <battery's power>,
       camera: <camera's quality>
     }
   `

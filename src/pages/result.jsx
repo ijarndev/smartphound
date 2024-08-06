@@ -45,15 +45,16 @@ export function Result({ globalProgress }) {
           <span className="font-bold w-full text-3xl text-center 2xl:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-sky-500">
             { data.device_name }
           </span>
+          <span className="font-bold w-full text-xl text-center 2xl:text-4xl text-gray-600 mt-4">~{data.average_price}</span>
         </header>
 
-        <div className="flex flex-col 2xl:flex-row gap-x-10 2xl:mt-10">
-          { <img className="2xl:max-h-96" src={data.device_image} alt="" /> }
+        <div className="flex flex-col 2xl:flex-row gap-x-10 2xl:mt-5">
+          { <img className="md:max-w-80 2xl:max-h-96 block margin-auto" src={data.device_image} alt="" /> }
 
           <div>
-            <p className="text-gray-600 text-xl">☝🤓 Detalles técnicos por si acaso:</p>
+            <p className="text-gray-600 text-xl mt-5 xl:mt-0">☝🤓 Detalles técnicos por si acaso:</p>
 
-            <ul className="pt-5">
+            <ul className="pt-5 max-w-96">
               <li><strong className="text-gray-600">CPU</strong>: {data.cpu}</li>
               <li><strong className="text-gray-600">Almacenamiento</strong>: {data.storage}</li>
               <li><strong className="text-gray-600">Pantalla</strong>: {data.screen}</li>
